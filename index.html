@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biblioteca Municipal - Inici</title>
+  <style>
+    :root{
+      --bg:#f6f9fb;
+      --card:#ffffff;
+      --accent:#2b6cb0;
+      --muted:#6b7280;
+      --radius:12px;
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef4fb);color:#111}
+
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:24px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(255,255,255,0.7);backdrop-filter:blur(4px);border-radius:14px;box-shadow:0 6px 18px rgba(20,40,80,0.06)
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#1e90ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    h1{font-size:18px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:14px}
+
+    main.hero{display:flex;gap:28px;align-items:center;margin-top:28px}
+    .hero-left{flex:1}
+    .hero-card{background:var(--card);padding:26px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(45,65,95,0.06)}
+    .kicker{font-size:13px;color:var(--accent);font-weight:600;letter-spacing:0.06em}
+    h2{margin:8px 0 12px;font-size:28px}
+    p.lead-2{color:var(--muted);line-height:1.6}
+
+    .btn{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(43,108,176,0.18)}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(43,108,176,0.16)}
+
+    .hero-right{width:320px}
+    .card-small{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:12px;border:1px solid rgba(20,40,80,0.04)}
+    ul.features{padding:0;margin:12px 0 0;list-style:none}
+    ul.features li{padding:8px 0;border-bottom:1px dashed #eef4fb;color:var(--muted);font-size:14px}
+
+    footer{margin-top:34px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.6);display:flex;justify-content:space-between;align-items:center}
+    .contact{font-size:14px;color:var(--muted)}
+    .copyright{font-size:13px;color:#8a8f98}
+
+    /* responsive */
+    @media (max-width:820px){
+      main.hero{flex-direction:column}
+      .hero-right{width:100%}
+      .wrap{margin:18px;padding:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">B</div>
+        <div>
+          <h1>Biblioteca Municipal</h1>
+          <p class="lead">Llegir, descobrir, compartir</p>
+        </div>
+      </div>
+      <nav aria-label="Navegació ràpida">
+        <a href="#" style="text-decoration:none;color:var(--accent);font-weight:600">Inici</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-left">
+        <div class="hero-card">
+          <div class="kicker">Benvinguts</div>
+          <h2>Descobreix el món a través dels llibres</h2>
+          <p class="lead-2">La nostra biblioteca ofereix accés a llibres, revistes i recursos digitals per a totes les edats. Vine a consultar el catàleg o inscriu-te per rebre recomanacions personalitzades.</p>
+
+          <!-- El botó que porta a una altra pàgina (catalog.html) -->
+          <a class="btn" href="catalog.html">Consulta el catàleg</a>
+          <a class="btn secondary" href="horaris.html" style="margin-left:10px">Horaris</a>
+        </div>
+
+        <section style="margin-top:18px">
+          <div class="card-small">
+            <strong>Activitats destacades</strong>
+            <ul class="features">
+              <li>Club de lectura: cada dimecres 18:00</li>
+              <li>Tallers infantils els dissabtes</li>
+              <li>Accés gratuït a revistes i bases de dades</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card-small">
+          <strong>Obre'ns la porta</strong>
+          <p style="margin:8px 0;color:var(--muted)">Adreça: Carrer dels Llibres, 12 </p>
+          <p style="margin:6px 0;font-size:14px;color:var(--muted)">Inscriu‑te a la nostra newsletter per rebre recomanacions mensuals.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="contact">Contacte: <a href="mailto:info@biblioteca.example">info@biblioteca.example</a></div>
+      <div class="copyright">© Biblioteca Municipal — Tots els drets reservats</div>
+    </footer>
+  </div>
+</body>
+</html>
